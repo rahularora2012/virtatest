@@ -1,4 +1,4 @@
-package com.rahularora.virtatest.ui
+package com.rahularora.virtatest.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,21 +7,20 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rahularora.virtatest.R
+import com.rahularora.virtatest.ui.recycleview.HomeRecycleViewAdapter
 import com.rahularora.virtatest.api.methods.appModule
 import com.rahularora.virtatest.databinding.ActivityHomeBinding
 import com.rahularora.virtatest.utils.SessionManager
-import com.rahularora.virtatest.viewmodel.MainRecyclerViewAdapter
-import com.rahularora.virtatest.viewmodel.MainViewModel
+import com.rahularora.virtatest.viewmodel.HomeViewModel
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
-    private val viewModel: MainViewModel by inject()
-    private val recyclerViewAdapter = MainRecyclerViewAdapter(ArrayList())
+    private val viewModel: HomeViewModel by inject()
+    private val recyclerViewAdapter = HomeRecycleViewAdapter(ArrayList())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,7 +9,7 @@ import com.google.gson.reflect.TypeToken
 import com.rahularora.virtatest.api.models.Stations
 import com.rahularora.virtatest.utils.GsonUtils
 
-class MainViewModel(private val utils: GsonUtils): ViewModel() {
+class HomeViewModel(private val utils: GsonUtils): ViewModel() {
     private val mutablestations = MutableLiveData<List<Stations>>()
     val stations1: LiveData<List<Stations>> get() = mutablestations
 

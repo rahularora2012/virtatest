@@ -1,12 +1,10 @@
-package com.rahularora.virtatest.ui
+package com.rahularora.virtatest.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.rahularora.virtatest.api.methods.appModule
 import com.rahularora.virtatest.api.response.BaseResponse
 import com.rahularora.virtatest.api.response.LoginResponse
 import com.rahularora.virtatest.databinding.ActivityMainBinding
@@ -14,8 +12,6 @@ import com.rahularora.virtatest.utils.AppUtils
 import com.rahularora.virtatest.utils.AppUtils.showToast
 import com.rahularora.virtatest.utils.SessionManager
 import com.rahularora.virtatest.viewmodel.LoginViewModel
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
 
 
 class MainActivity : AppCompatActivity() {
